@@ -1,0 +1,84 @@
+<html>
+<!-- Page setup & favicon formatting-->
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link href="a3_style.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>Bottle Icon</title>
+    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+</head>
+
+<body>
+    <!--This is the header tab with the team logo and the Launch Our Solution button-->
+    <div id="wrap">
+        <header style="height: 100px;">
+            <a href="solution.html">
+                <img src="logo copy.png" alt="Home" class="teamLogo">
+            </a>
+            <h1 style="margin-top: 10px; text-align: center;float: left;">Group 34<br>
+                Welcome to our IE 332 Project!
+            </h1>
+            <a href="solution.html">
+                <button type="launchButton">Launch<br>our Solution!</button>
+            </a>
+        </header>
+
+        <!--Pictures of all the members-->
+        <div class="pictures">
+            <div class="Person"><a href="http://web.ics.purdue.edu/~g1140984/about_us.html#katie"
+                    style="margin: 0%;"><img src="pic_katie.jpg" alt="Katie Picture"
+                        style="width:200px;height: 200px;"></a>
+                <h3 style="line-height: 25px;">Katie Adams</h3>
+            </div>
+            <div class="Person"><a href="http://web.ics.purdue.edu/~g1140984/about_us.html#gabriel"
+                    style="margin: 0%;"><img src="pic_gabriel.jpg" alt="Gabriel Picture"
+                        style="width:200px;height: 200px;"></a>
+                <h3 style="line-height: 25px;">Gabriel Figueiredo Barbosa</h3>
+            </div>
+            <div class="Person"><a href="http://web.ics.purdue.edu/~g1140984/about_us.html#ian" 
+                style="margin: 0%;"><img src="pic_ian2.jpg" alt="Ian Picture" style="width:200px;height: 200px;"></a>
+                <h3 style="line-height: 25px;">Ian Criste</h3>
+            </div>
+            <div class="Person"><a href="http://web.ics.purdue.edu/~g1140984/about_us.html#shaan"
+                    style="margin: 0%;"><img src="pic_shaan.jpg" alt="Shaan Picture"
+                        style="width:200px;height: 200px;"></a>
+                <h3 style="line-height: 25px;">Shaan Choksi</h3>
+            </div>
+            <div class="Person"><a href="http://web.ics.purdue.edu/~g1140984/about_us.html#aidan"
+                    style="margin: 0%;"><img src="pic_aidan.jpg" alt="Aidan Picture"
+                        style="width:200px;height: 200px;"></a>
+                <h3 style="line-height: 25px;">Aidan Garlinger</h3>
+            </div>
+        </div>
+    </div>
+
+    <!--IP Footer that executes a traceroute function to the user-->
+    <div class="ip_block">
+        <div id="IP-Output" style="text-align: center;line-height: 30px;">
+            <div>
+                <script>
+                    fetch('a3_v1.php')
+                        .then(response => response.text())
+                        .then(data => {
+                            document.getElementById('IP-Output').innerHTML = data;
+                        })
+                        .catch(error => console.error('Error fetching PHP output:', error));
+                </script>
+            </div>
+        </div>
+    </div> 
+
+    <footer>
+        <h5>&copy; 2024 Group thirty4. All Rights Reserved.</h5>
+    </footer>
+
+</body>
+
+</html>
